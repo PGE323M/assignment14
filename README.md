@@ -1,6 +1,6 @@
 # Homework Assignment 14
 
-![Assignment 14](https://github.com/PGE323M/assignment14-solution/workflows/.github/workflows/main.yml/badge.svg)
+![Assignment 14](https://github.com/PGE323M/assignment14/workflows/.github/workflows/main.yml/badge.svg)
 
 ## Instructions
 
