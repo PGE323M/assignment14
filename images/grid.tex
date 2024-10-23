@@ -1,0 +1,28 @@
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{patterns}
+\begin{document}
+\begin{tikzpicture}
+\foreach \i in {0, 2, 4, 6, 8} {
+    \draw [] (\i,0) -- (\i,2)  node [below] at (\i,0) {};
+    \draw (\i, -0.1) -- (\i, -1);
+}
+\foreach \i in {0, 2} {
+    \draw [] (0,\i) -- (8,\i) node [left] at (0,\i) {};
+}
+\draw [] node at (1,1.) {$k = 10\,$mD};
+\draw [] node at (3,1.) {$k = 100\,$mD};
+\draw [] node at (5,1.) {$k = 50\,$mD};
+\draw [] node at (7,1.) {$k = 20\,$mD};
+\draw[<->] (0,-0.6) -- (2,-0.6) node[draw=none,fill=none,font=\scriptsize,midway, above] {$\Delta x=2000\,$ft};
+\draw[<->] (2,-0.6) -- (4,-0.6) node[draw=none,fill=none,font=\scriptsize,midway, above] {$\Delta x=3000\,$ft};
+\draw[<->] (4,-0.6) -- (6,-0.6) node[draw=none,fill=none,font=\scriptsize,midway, above] {$\Delta x=1500\,$ft};
+\draw[<->] (6,-0.6) -- (8,-0.6) node[draw=none,fill=none,font=\scriptsize,midway, above] {$\Delta x=3500\,$ft};
+\draw [right] node at (0,3.25) {$A = 200000\,$ft$^2$};
+\draw [right] node at (0,2.75) {$\phi=0.20$};
+\draw [right] node at (6,3.25) {$\mu = 1\,$cp};
+\draw [right] node at (6,2.75) {$c_t=10^{-6}\,\mbox{psi}^{-1}$};
+\draw [] node at (4,2.25) {$p_{\mbox{initial}} = 1000\,$psi};
+\draw [] node at (-1.2,1) {$p_{B} = 2000\,$psi};
+\fill [pattern=north east lines] (8,0) rectangle (8.5,2) node [label={[label distance=0.3cm]0:No flow}, midway] {};
+\end{tikzpicture}
+\end{document}
